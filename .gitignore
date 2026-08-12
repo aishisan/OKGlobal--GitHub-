@@ -1,0 +1,25 @@
+# dependencies
+/node_modules/
+
+# builds and framework caches
+/dist/
+/.next/
+/.vinext/
+/out/
+/coverage/
+
+# Cloudflare local state
+/.wrangler/
+
+# local files
+/.env*
+*.log
+*.pem
+.DS_Store
+/work/
+/outputs/
+
+# editor and OS files
+.vscode/
+.idea/
+Thumbs.db

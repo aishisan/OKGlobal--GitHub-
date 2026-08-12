@@ -1,0 +1,10 @@
+GitHub 上传步骤
+
+1. 在 GitHub 新建一个空仓库。
+2. 将本文件夹内的所有内容上传到仓库根目录。
+3. 不要上传 node_modules、dist、.wrangler 或任何 .env 文件。
+4. 本地测试：安装 Node.js 22.13 以上版本，然后运行 npm install 和 npm run dev。
+5. RSVP 信息存储需要 Cloudflare D1 数据库，并绑定为 DB。
+6. 如使用其他托管平台，需要按该平台方式配置 D1 或改写 app/api/rsvp/route.ts 的存储逻辑。
+
+本打包目录已移除 OpenAI Sites 项目编号、缓存、日志、本地数据库和测试数据。

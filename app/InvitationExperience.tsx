@@ -8,12 +8,6 @@ type SubmissionState =
   | { kind: "success"; reference: string }
   | { kind: "error"; message: string };
 
-const highlights = [
-  ["01", "Shengfang International Furniture Centre", "Discover outstanding value across living room, dining, bedroom, office, hotel, outdoor furniture and more at SFIFC."],
-  ["02", "Factories & Source Suppliers", "Explore collections, materials and manufacturing capabilities while discussing pricing, customization, shipping and export solutions."],
-  ["03", "Fully Hosted Journey", "Flights between Shanghai and Tianjin, hotel accommodation, transfers and meals are provided free for invited guests."],
-];
-
 export function InvitationExperience() {
   const [submission, setSubmission] = useState<SubmissionState>({ kind: "idle" });
 
@@ -57,7 +51,6 @@ export function InvitationExperience() {
         </nav>
 
         <div className="hero-content shell">
-          <p className="eyebrow">2026 Exclusive Business Invitation</p>
           <h1>Invitation</h1>
           <p className="hero-subtitle">An exclusive visit to Shengfang International Furniture Centre and the heart of China&apos;s furniture manufacturing industry.</p>
           <div className="hero-date">
@@ -105,24 +98,6 @@ export function InvitationExperience() {
         </div>
       </section>
 
-      <section className="journey section">
-        <div className="shell">
-          <div className="section-heading">
-            <p className="eyebrow gold">The Experience</p>
-            <h2>Direct access to the heart of furniture manufacturing.</h2>
-          </div>
-          <div className="highlight-grid">
-            {highlights.map(([number, title, copy]) => (
-              <article className="highlight" key={number}>
-                <span className="number">{number}</span>
-                <h3>{title}</h3>
-                <p>{copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="itinerary section" id="itinerary">
         <div className="shell itinerary-layout">
           <div className="itinerary-intro">
@@ -165,10 +140,11 @@ export function InvitationExperience() {
             <article>
               <div className="date-badge"><strong>13</strong><span>SEP</span></div>
               <div>
-                <p className="route">Tianjin → Shanghai</p>
-                <h3>Complimentary Departure Transfer</h3>
+                <p className="route">Tianjin → Shanghai / Shengfang</p>
+                <h3>Departure Transfer or Extended SFIFC Visit</h3>
                 <div className="schedule-list">
-                  <p><time>09:00–12:00</time><span>Complimentary transfer to the airport or train station, with airfare reimbursement provided for guests returning to Shanghai</span></p>
+                  <p><time>09:00–12:00</time><span>Complimentary transfer to airport or train station, with airfare reimbursement provided for guests returning to Shanghai.</span></p>
+                  <p><time>10:00–17:00</time><span>Guided Tour of Shengfang International Furniture Centre with dedicated business support. (For guests extending their stay)</span></p>
                 </div>
               </div>
             </article>

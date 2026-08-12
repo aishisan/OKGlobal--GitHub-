@@ -9,7 +9,7 @@ type SubmissionState =
   | { kind: "error"; message: string };
 
 const highlights = [
-  ["01", "Shengfang Furniture Expo City", "Discover outstanding value across living room, dining, bedroom, office, hotel, outdoor furniture and more."],
+  ["01", "Shengfang International Furniture Centre", "Discover outstanding value across living room, dining, bedroom, office, hotel, outdoor furniture and more at SFIFC."],
   ["02", "Factories & Source Suppliers", "Explore collections, materials and manufacturing capabilities while discussing pricing, customization, shipping and export solutions."],
   ["03", "Fully Hosted Journey", "Flights between Shanghai and Tianjin, hotel accommodation, transfers and meals are provided free for invited guests."],
 ];
@@ -59,7 +59,7 @@ export function InvitationExperience() {
         <div className="hero-content shell">
           <p className="eyebrow">2026 Exclusive Business Invitation</p>
           <h1>Invitation</h1>
-          <p className="hero-subtitle">An exclusive furniture business journey across Shanghai, Tianjin and Shengfang.</p>
+          <p className="hero-subtitle">An exclusive visit to Shengfang International Furniture Centre and the heart of China&apos;s furniture manufacturing industry.</p>
           <div className="hero-date">
             <span>September</span>
             <strong>11—13</strong>
@@ -81,7 +81,7 @@ export function InvitationExperience() {
           <p className="script-word">Greetings!</p>
           <div className="ornament" aria-hidden="true"><span>◆</span></div>
           <p className="lead">
-            Come visit us at Shengfang Furniture Expo City for the best value-for-money furniture products. On display will be Living Room Furniture, Dining Furniture, Bedroom Furniture, Office Furniture, Hotel Furniture, Outdoor Furniture and more.
+            Come visit us at Shengfang International Furniture Centre (SFIFC) for the best value-for-money furniture products. On display will be Living Room Furniture, Dining Furniture, Bedroom Furniture, Office Furniture, Hotel Furniture, Outdoor Furniture and more.
           </p>
           <p>
             We are also proud to partner with FurnitureAndFurnishing.com, Asia&apos;s number 1 furniture trade magazine, to bring you this exclusive invitation to explore Shengfang—one of China&apos;s largest and most dynamic furniture manufacturing hubs.
@@ -89,8 +89,19 @@ export function InvitationExperience() {
           <p>
             From September 11–13, we will bring you to see our entire portfolio of products and factories. All travel arrangements will be provided free, including itinerary planning, flights between Shanghai and Shengfang via Tianjin Binhai Airport, hotel accommodation, transfers and meals.
           </p>
-          <p className="limited-note">Slots are limited and available on a first-come, first-served basis.</p>
-          <p className="signature">Explore Opportunities · Build Partnerships · Grow Together</p>
+          <p className="limited-note">Slots are limited and available on a first-come, first-served basis. Please contact us to reserve your place now.</p>
+          <div className="contact-card">
+            <div className="contact-copy">
+              <p className="eyebrow gold">Contact Us</p>
+              <h3>Scan to connect with our team.</h3>
+              <a href="mailto:operation@okglobaltrade.com">operation@okglobaltrade.com</a>
+            </div>
+            <div className="qr-wrap">
+              <img src="/wechat-qr.png" alt="WeChat QR code for OK Global" />
+              <span>WeChat</span>
+            </div>
+          </div>
+          <p className="signature">Explore Opportunities · Grow Together</p>
         </div>
       </section>
 
@@ -119,8 +130,8 @@ export function InvitationExperience() {
             <h2>Three remarkable days, thoughtfully arranged.</h2>
             <p>This exclusive business visit offers direct access to one of China&apos;s largest furniture manufacturing hubs. Our team will coordinate the complete journey and provide dedicated assistance throughout.</p>
             <div className="travel-card">
-              <div><span>Recommended Flight 1</span><strong>CA2826 · 10:50–12:55</strong></div>
-              <div><span>Recommended Flight 2</span><strong>MU5227 · 14:05–16:05</strong></div>
+              <div><span>Recommended Flight</span><strong>CA2840 · 11:55–14:15</strong></div>
+              <div><span>Route</span><strong>Shanghai Pudong → Tianjin Binhai</strong></div>
             </div>
           </div>
 
@@ -129,17 +140,11 @@ export function InvitationExperience() {
               <div className="date-badge"><strong>11</strong><span>SEP</span></div>
               <div>
                 <p className="route">Shanghai → Tianjin</p>
-                <h3>Arrival, River Cruise & Welcome Dinner</h3>
+                <h3>Arrival, Haihe River Cruise & Welcome Dinner</h3>
                 <div className="schedule-list">
-                  <p><time>11:55–14:15</time><span>In-flight (times correspond to the recommended flight)</span></p>
-                  <p><time>14:15–15:30</time><span>Transfer from airport to hotel</span></p>
-                  <p><time>15:30–17:00</time><span>Stop 1: Check-in and rest at hotel</span></p>
-                  <p><time>17:00–17:30</time><span>Drive to Italian-Style District Pier</span></p>
-                  <p><time>17:30–18:30</time><span>Stop 2: Haihe River cruise</span></p>
-                  <p><time>18:30–18:40</time><span>Walk to Flo French Restaurant</span></p>
-                  <p><time>18:40–19:00</time><span>Pre-dinner reception</span></p>
-                  <p><time>19:00–21:00</time><span>Welcome dinner at Flo French Restaurant</span></p>
-                  <p><time>21:00–21:40</time><span>Return to hotel</span></p>
+                  <p><time>11:55–14:15</time><span>Recommended flight CA2840 from Shanghai Pudong to Tianjin Binhai</span></p>
+                  <p><time>Hosted</time><span>Flight tickets from Shanghai to Tianjin and hotel accommodation booked and paid for by OK Global</span></p>
+                  <p><time>Evening</time><span>Haihe River sightseeing cruise and welcome dinner, followed by business discussions</span></p>
                 </div>
               </div>
             </article>
@@ -147,21 +152,23 @@ export function InvitationExperience() {
               <div className="date-badge"><strong>12</strong><span>SEP</span></div>
               <div>
                 <p className="route">Tianjin → Shengfang</p>
-                <h3>Preview Exhibition & Factory Tour</h3>
+                <h3>SFIFC Visit & Curated Factory Tour</h3>
                 <div className="schedule-list">
-                  <p><time>09:00–12:00</time><span>Shengfang Preview Exhibition</span></p>
-                  <p><time>14:00–17:00</time><span>Factory inspection (subject to actual conditions)</span></p>
+                  <p><time>09:00–12:00</time><span>Visit to Shengfang International Furniture Centre</span></p>
+                  <p><time>12:00–13:30</time><span>Hosted lunch at a local restaurant</span></p>
+                  <p><time>14:00–17:00</time><span>Curated factory visits in Shengfang</span></p>
+                  <p><time>18:00–20:00</time><span>Hosted dinner at a local restaurant</span></p>
+                  <p><time>20:00–21:30</time><span>Transfer to Pan Pacific Hotel, Tianjin</span></p>
                 </div>
               </div>
             </article>
             <article>
               <div className="date-badge"><strong>13</strong><span>SEP</span></div>
               <div>
-                <p className="route">Tianjin → Departure</p>
-                <h3>Airport or Train Station Transfer</h3>
+                <p className="route">Tianjin → Shanghai</p>
+                <h3>Complimentary Departure Transfer</h3>
                 <div className="schedule-list">
-                  <p><time>09:00–12:00</time><span>Transfer to the airport for departure</span></p>
-                  <p><time>By arrangement</time><span>Guests leaving for other cities will receive a car transfer to the airport or train station, with airfare reimbursement for flights back to Shanghai.</span></p>
+                  <p><time>09:00–12:00</time><span>Complimentary transfer to the airport or train station, with airfare reimbursement provided for guests returning to Shanghai</span></p>
                 </div>
               </div>
             </article>
@@ -198,12 +205,22 @@ export function InvitationExperience() {
                   <p>Fields marked * are required.</p>
                 </div>
                 <div className="field-grid">
-                  <label>Full Name *<input name="fullName" autoComplete="name" required maxLength={100} /></label>
+                  <div className="form-section-title wide"><span>01</span> Buyer Background Information</div>
                   <label>Company *<input name="company" autoComplete="organization" required maxLength={150} /></label>
-                  <label>Job Title<input name="jobTitle" autoComplete="organization-title" maxLength={100} /></label>
                   <label>Country / Region *<input name="countryRegion" autoComplete="country-name" required maxLength={100} /></label>
+                  <label className="wide">Business Description<textarea name="businessDescription" rows={2} maxLength={500} /></label>
+                  <label>Annual Turnover<input name="annualTurnover" maxLength={100} /></label>
+                  <label>Main Markets<input name="mainMarkets" maxLength={300} /></label>
+                  <label>Contact Person *<input name="fullName" autoComplete="name" required maxLength={100} /></label>
+                  <label>Job Title<input name="jobTitle" autoComplete="organization-title" maxLength={100} /></label>
                   <label>WhatsApp / Mobile *<input name="mobile" type="tel" autoComplete="tel" required maxLength={40} /></label>
                   <label>Email *<input name="email" type="email" autoComplete="email" required maxLength={150} /></label>
+                  <label>Website<input name="website" type="url" placeholder="https://" maxLength={250} /></label>
+                  <label>Number of Guests *
+                    <select name="guestCount" required defaultValue="1">
+                      {[1, 2, 3, 4, 5, 6].map((count) => <option key={count} value={count}>{count}</option>)}
+                    </select>
+                  </label>
                   <label>Attendance *
                     <select name="attendanceStatus" required defaultValue="">
                       <option value="" disabled>Please select</option>
@@ -212,15 +229,22 @@ export function InvitationExperience() {
                       <option value="unable">I am unable to attend</option>
                     </select>
                   </label>
-                  <label>Number of Guests *
-                    <select name="guestCount" required defaultValue="1">
-                      {[1, 2, 3, 4, 5, 6].map((count) => <option key={count} value={count}>{count}</option>)}
-                    </select>
-                  </label>
-                  <label className="wide">Departure City<input name="departureCity" maxLength={100} /></label>
-                  <label className="wide">Business Interests<textarea name="businessInterests" rows={3} maxLength={800} placeholder="Products, categories or cooperation interests" /></label>
+                  <label>Departure City<input name="departureCity" maxLength={100} /></label>
                   <label className="wide">Dietary Requirements<textarea name="dietaryRequirements" rows={2} maxLength={500} /></label>
                   <label className="wide">Special Assistance<textarea name="specialAssistance" rows={2} maxLength={500} /></label>
+
+                  <div className="form-section-title wide"><span>02</span> Product Requirements</div>
+                  <label>Product Name<input name="productName" maxLength={200} /></label>
+                  <label>Quantity<input name="quantity" maxLength={100} /></label>
+                  <label className="wide">Features / Specifications / Materials / Dimensions<textarea name="productSpecifications" rows={3} maxLength={1000} /></label>
+                  <label className="wide">Packaging Requirements<textarea name="packagingRequirements" rows={2} maxLength={500} /></label>
+                  <label>Target FOB Price (USD)<input name="fobPrice" maxLength={100} /></label>
+                  <label>Product Picture Link<input name="productPictureLink" type="url" placeholder="https://" maxLength={500} /></label>
+                  <label className="wide">Other Requirements / Remarks<textarea name="otherRequirements" rows={3} maxLength={1000} /></label>
+
+                  <div className="form-section-title wide"><span>03</span> Supplier Qualification Requirements</div>
+                  <label className="wide">Required Supplier Certifications<textarea name="supplierCertifications" rows={2} maxLength={500} /></label>
+                  <label className="wide">Priority Considerations<textarea name="priorityConsiderations" rows={3} maxLength={800} placeholder="Environmental packaging, material grade or other priorities" /></label>
                 </div>
                 <label className="consent">
                   <input name="consent" type="checkbox" value="yes" required />
@@ -243,6 +267,7 @@ export function InvitationExperience() {
             <strong>Hebei OK Global Trade Co., Ltd.</strong>
           </div>
           <p>September 11—13, 2026 · Shanghai · Tianjin · Shengfang</p>
+          <a href="mailto:operation@okglobaltrade.com">operation@okglobaltrade.com</a>
         </div>
       </footer>
     </main>

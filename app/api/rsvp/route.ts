@@ -35,6 +35,25 @@ export async function POST(request: Request) {
     }
 
     const id = crypto.randomUUID();
+    const businessDetails = [
+      ["Business Description", clean(body.businessDescription, 500)],
+      ["Annual Turnover", clean(body.annualTurnover, 100)],
+      ["Main Markets", clean(body.mainMarkets, 300)],
+      ["Website", clean(body.website, 250)],
+      ["Product Name", clean(body.productName, 200)],
+      ["Quantity", clean(body.quantity, 100)],
+      ["Specifications / Materials / Dimensions", clean(body.productSpecifications, 1000)],
+      ["Packaging Requirements", clean(body.packagingRequirements, 500)],
+      ["Target FOB Price (USD)", clean(body.fobPrice, 100)],
+      ["Product Picture Link", clean(body.productPictureLink, 500)],
+      ["Other Requirements / Remarks", clean(body.otherRequirements, 1000)],
+      ["Required Supplier Certifications", clean(body.supplierCertifications, 500)],
+      ["Priority Considerations", clean(body.priorityConsiderations, 800)],
+    ]
+      .filter(([, value]) => value)
+      .map(([label, value]) => `${label}: ${value}`)
+      .join("\n");
+
     await getDb().insert(rsvps).values({
       id,
       fullName: clean(body.fullName, 100),
@@ -46,7 +65,7 @@ export async function POST(request: Request) {
       attendanceStatus,
       guestCount,
       departureCity: clean(body.departureCity, 100) || null,
-      businessInterests: clean(body.businessInterests, 800) || null,
+      businessInterests: businessDetails || null,
       dietaryRequirements: clean(body.dietaryRequirements, 500) || null,
       specialAssistance: clean(body.specialAssistance, 500) || null,
       consent: true,

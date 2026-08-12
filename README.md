@@ -31,7 +31,7 @@ npm run start
 
 ## RSVP database
 
-The RSVP API expects a Cloudflare D1 binding named `DB`. The database schema is in `db/schema.ts`, and the generated migration is in `drizzle/`.
+The RSVP API uses the Cloudflare D1 database `okglobal-rsvp` with the binding name `DB`. The database schema is in `db/schema.ts`, and the generated migration is in `drizzle/`.
 
 For deployment on a platform other than OpenAI Sites, configure a D1 database and bind it as `DB`. If you deploy only the visual invitation without the database binding, the page will load but RSVP submissions will not be stored.
 

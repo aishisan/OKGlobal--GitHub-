@@ -90,12 +90,19 @@ export function InvitationExperience() {
             <div className="contact-copy">
               <p className="eyebrow gold">Contact Us</p>
               <h3>Scan to connect with our team.</h3>
-              <a href="mailto:supply@okglobaltrade.com">supply@okglobaltrade.com</a>
+              <div className="contact-links">
+                <a href="mailto:supply@okglobaltrade.com">supply@okglobaltrade.com</a>
+                <a href="tel:+8618340765221">+86 183 4076 5221</a>
+              </div>
             </div>
             <div className="contact-qr-grid">
               <div className="qr-wrap">
                 <img src="/whatsapp-qr.png" alt="WhatsApp QR code for OK Global" />
-                <span>WhatsApp</span>
+                <span>WhatsApp 1</span>
+              </div>
+              <div className="qr-wrap">
+                <img src="/whatsapp-qr-2.png" alt="Second WhatsApp QR code for OK Global" />
+                <span>WhatsApp 2</span>
               </div>
               <div className="qr-wrap">
                 <img src="/wechat-qr.png" alt="WeChat QR code for OK Global" />
@@ -259,7 +266,10 @@ export function InvitationExperience() {
             <strong>Hebei OK Global Trade Co., Ltd.</strong>
           </div>
           <p>September 11—13, 2026 · Shanghai · Tianjin · Shengfang</p>
-          <a href="mailto:supply@okglobaltrade.com">supply@okglobaltrade.com</a>
+          <div className="footer-contact">
+            <a href="mailto:supply@okglobaltrade.com">supply@okglobaltrade.com</a>
+            <a href="tel:+8618340765221">+86 183 4076 5221</a>
+          </div>
         </div>
       </footer>
     </main>

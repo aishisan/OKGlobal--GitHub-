@@ -65,9 +65,10 @@ p { font-size: 17px; line-height: 1.8; }
 .contact-copy .eyebrow { margin-bottom: 12px; }
 .contact-copy h3 { margin-bottom: 18px; font-size: 27px; font-weight: 400; line-height: 1.25; }
 .contact-copy a { color: var(--gold); font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 700; overflow-wrap: anywhere; }
-.contact-qr-grid { display: grid; grid-template-columns: repeat(2, 150px); gap: 18px; align-items: start; }
+.contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.contact-qr-grid { display: grid; grid-template-columns: repeat(3, 130px); gap: 14px; align-items: start; }
 .qr-wrap { display: grid; gap: 9px; text-align: center; }
-.qr-wrap img { width: 150px; aspect-ratio: 1; border: 7px solid white; object-fit: contain; }
+.qr-wrap img { width: 130px; aspect-ratio: 1; border: 7px solid white; object-fit: contain; }
 .qr-wrap span { color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
 
 .journey { background: var(--ivory); }
@@ -150,6 +151,7 @@ footer { padding: 30px 0; color: #a8b6c8; background: #04142c; }
 .footer-brand strong { font-size: 13px; }
 footer p { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
 footer a { color: var(--gold-light); font-family: Arial, Helvetica, sans-serif; font-size: 11px; }
+.footer-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
 
 @media (max-width: 860px) {
   .section { padding: 84px 0; }
@@ -179,9 +181,10 @@ footer a { color: var(--gold-light); font-family: Arial, Helvetica, sans-serif; 
   .hero-date span { font-size: 9px; letter-spacing: .14em; }
   .signature { font-size: 23px; }
   .contact-card { grid-template-columns: 1fr; padding: 26px 20px; text-align: center; }
-  .contact-qr-grid { grid-template-columns: repeat(2, minmax(0, 150px)); justify-content: center; gap: 12px; }
+  .contact-links { align-items: center; }
+  .contact-qr-grid { grid-template-columns: repeat(3, minmax(0, 100px)); justify-content: center; gap: 10px; }
   .qr-wrap { justify-items: center; }
-  .qr-wrap img { width: min(34vw, 150px); }
+  .qr-wrap img { width: min(27vw, 100px); }
   .highlight { padding-inline: 12px; }
   .timeline article { grid-template-columns: 58px 1fr; gap: 18px; }
   .date-badge { width: 56px; height: 70px; }
@@ -196,6 +199,7 @@ footer a { color: var(--gold-light); font-family: Arial, Helvetica, sans-serif; 
   .field-grid .wide { grid-column: auto; }
   .form-heading { display: block; }
   .footer-inner { gap: 25px; flex-direction: column; text-align: center; }
+  .footer-contact { align-items: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

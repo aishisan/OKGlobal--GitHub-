@@ -43,11 +43,15 @@ export function InvitationExperience() {
         <div className="hero-shade" />
         <div className="hero-frame" aria-hidden="true" />
         <nav className="nav shell" aria-label="Invitation navigation">
-          <a className="brand" href="#top" aria-label="OK Global invitation home">
+          <div className="brand">
             <img src="/okglobal-logo.png" alt="OK Global" />
-            <span>Hebei OK Global Trade Co., Ltd.</span>
-          </a>
-          <a className="nav-rsvp" href="#rsvp">RSVP</a>
+            <div className="brand-copy">
+              <span>Hebei OK Global Trade Co., Ltd.</span>
+              <a href="https://okglobaltrade.en.alibaba.com" target="_blank" rel="noreferrer">
+                okglobaltrade.en.alibaba.com
+              </a>
+            </div>
+          </div>
         </nav>
 
         <div className="hero-content shell">

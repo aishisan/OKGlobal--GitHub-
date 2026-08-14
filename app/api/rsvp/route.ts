@@ -1,7 +1,7 @@
 import { getDb } from "../../../db";
 import { rsvps } from "../../../db/schema";
 
-const requiredTextFields = ["fullName", "company", "countryRegion", "mobile", "email", "attendanceStatus"] as const;
+const requiredTextFields = ["fullName", "company", "mobile", "email", "attendanceStatus"] as const;
 const allowedAttendance = new Set(["attending", "considering", "unable"]);
 
 function clean(value: unknown, max: number) {
@@ -43,9 +43,6 @@ export async function POST(request: Request) {
       ["Product Name", clean(body.productName, 200)],
       ["Quantity", clean(body.quantity, 100)],
       ["Specifications / Materials / Dimensions", clean(body.productSpecifications, 1000)],
-      ["Packaging Requirements", clean(body.packagingRequirements, 500)],
-      ["Target FOB Price (USD)", clean(body.fobPrice, 100)],
-      ["Product Picture Link", clean(body.productPictureLink, 500)],
       ["Other Requirements / Remarks", clean(body.otherRequirements, 1000)],
       ["Required Supplier Certifications", clean(body.supplierCertifications, 500)],
       ["Priority Considerations", clean(body.priorityConsiderations, 800)],
@@ -59,12 +56,12 @@ export async function POST(request: Request) {
       fullName: clean(body.fullName, 100),
       company: clean(body.company, 150),
       jobTitle: clean(body.jobTitle, 100) || null,
-      countryRegion: clean(body.countryRegion, 100),
+      countryRegion: "Not provided",
       mobile: clean(body.mobile, 40),
       email,
       attendanceStatus,
       guestCount,
-      departureCity: clean(body.departureCity, 100) || null,
+      departureCity: null,
       businessInterests: businessDetails || null,
       dietaryRequirements: clean(body.dietaryRequirements, 500) || null,
       specialAssistance: clean(body.specialAssistance, 500) || null,
